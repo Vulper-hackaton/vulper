@@ -2,5 +2,5 @@
 
 TODO:
 - [x] Configure Vue
-- [] Edit color scheme
-- [] ...
+- [ ] Edit color scheme
+- [ ] ...
