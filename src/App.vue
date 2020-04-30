@@ -1,34 +1,61 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/register">Registrar</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="body" class="container-fluid">
+    <div id="header" class="row justify-content-between">
+      <div id= "logo" class="col-4 rounded">
+      </div>
+      <div id= "name" class="col-2">
+      </div>
     </div>
-    <router-view/>
+
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5"></div>
+    <div class="col pt-5">
+      <div class="row justify-content-md-center">
+          <div id="bg" class="col col-lg-3">
+            <button id="button1" type="button" class="btn rounded btn-block p-3">Defina seu perfil</button>
+          </div>
+      </div>
+
+      <div class="row p-4">
+        <div class="col col-4"></div>
+        <div class="col col-4 "><div class="row justify-content-md-center"><button id="button2" type="button" class="btn rounded btn-sm">Profissional</button></div></div>
+        <div class="col col-4"><div class="row justify-content-end"><button id="button3" type="button" class="btn rounded btn-sm">Acesso Direto</button></div></div>
+      </div>
+
+      
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#logo {
+  background: transparent linear-gradient(90deg, #10C0C6 0%, #47D38C 100%, #086063 100%);
+}
+#name {
+  background: transparent linear-gradient(90deg, #10C0C6 0%, #47D38C 100%, #086063 100%);
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#body{
+  background-color: #F1F1F1;
+  min-height: 100vh;
+}
+#button1{
+  background: transparent linear-gradient(270deg, #4DDE90 0%, #10C0C6 100%);
+  font-family: 'Lato',sans-serif;
+}
+#bg{
+}
+#button2{
+  background: transparent linear-gradient(270deg, #4DDE90 0%, #10C0C6 100%);
+  font-family: 'Lato',sans-serif;
+}
+#button3{
+  background: transparent linear-gradient(270deg, #4DDE90 0%, #10C0C6 100%);
+  font-family: 'Lato',sans-serif;
 }
 </style>
