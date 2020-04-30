@@ -1,6 +1,18 @@
 <template>
   <div id="body" class="container-fluid">
-    <div>Registrar Cliente</div>
+    <div id="header" class="row justify-content-between">
+      <div id="logo" class="col-2 rounded">
+        <router-link to="/">
+          <div class="">
+            <img
+              src="../../public/assets/low-poly-gorilla.svg"
+              class="img-responsive"
+            />
+          </div>
+        </router-link>
+      </div>
+      <div id="name" class="col-2"></div>
+    </div>
 
     <div class="error" v-if="error">{{ error.message }}</div>
     <div class="col pt-5"></div>
@@ -10,19 +22,39 @@
 
     <div class="d-flex justify-content-center p-5">
       <form @submit.prevent="pressed">
-        <div class="email">
-          <input type="email" v-model="email" placeholder="email" />
-        </div>
-        <div class="password">
-          <input type="password" v-model="password" placeholder="password" />
+        <div class="email input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">E-mail:</span>
+          </div>
+          <input
+            type="EMAIL"
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3"
+            v-model="email"
+          />
         </div>
 
-        <router-link to="">
-          <button id="but0" type="submit" class="btn rounded">
-            Submit
-          </button>
-        </router-link>
+        <div class="password input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Senha:</span>
+          </div>
+          <input
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3"
+            type="password"
+            v-model="password"
+          />
+        </div>
 
+        <div class="row justify-content-center">
+          <router-link to="">
+            <button id="but0" type="submit" class="btn rounded">
+              Submit
+            </button>
+          </router-link>
+        </div>
       </form>
     </div>
   </div>

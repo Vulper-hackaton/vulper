@@ -1,8 +1,16 @@
 <template>
   <div id="body" class="container-fluid">
-    <router-link to="/"></router-link>
     <div id="header" class="row justify-content-between">
-      <div id="logo" class="col-4 rounded"></div>
+      <div id="logo" class="col-2 rounded">
+        <router-link to="/">
+          <div class="">
+            <img
+              src="../../public/assets/low-poly-gorilla.svg"
+              class="img-responsive"
+            />
+          </div>
+        </router-link>
+      </div>
       <div id="name" class="col-2"></div>
     </div>
 
@@ -13,6 +21,7 @@
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
+
     <div class="col pt-5">
       <div class="row justify-content-md-center">
         <div id="bg" class="col col-lg-3">
@@ -61,6 +70,12 @@ export default {
 </script>
 
 <style lang="scss">
+.img-responsive {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 72px;
+}
 #logo {
   background: transparent
     linear-gradient(90deg, #10c0c6 0%, #47d38c 100%, #086063 100%);
