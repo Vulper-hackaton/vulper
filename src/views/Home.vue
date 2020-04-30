@@ -13,12 +13,15 @@
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
+
     <div class="col pt-5">
       <div class="row justify-content-md-center">
         <div id="bg" class="col col-lg-3">
-          <button id="button1" type="button" class="btn rounded btn-block p-3">
-            <router-link to="/register">Defina seu perfil</router-link>
-          </button>
+          <router-link to="/register">
+            <button id="button1" type="button" class="btn rounded btn-block p-3">
+              Cadastro de Cliente
+            </button>
+          </router-link>
         </div>
       </div>
 
@@ -26,59 +29,60 @@
         <div class="col col-4"></div>
         <div class="col col-4 ">
           <div class="row justify-content-md-center">
-            <button id="button2" type="button" class="btn rounded btn-sm">
-              <router-link to="/new-broker">Profissional</router-link>
-            </button>
+            <router-link to="/new-broker">
+              <button id="button2" type="button" class="btn rounded btn-sm">
+                Cadastro de Broker
+              </button>
+            </router-link>
           </div>
         </div>
         <div class="col col-4">
           <div class="row justify-content-end">
-            <button id="button3" type="button" class="btn rounded btn-sm">
-              <router-link to="/login">Login</router-link>
-            </button>
+            <router-link to="/login">
+              <button id="button3" type="button" class="btn rounded btn-sm">
+                Login
+              </button>
+            </router-link>
           </div>
         </div>
       </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
-
-export default {
-  name: 'Home',
-}
+  export default {
+    name: "Home",
+  };
 </script>
 
-
-
 <style lang="scss">
-#logo {
-  background: transparent
+  #logo {
+    background: transparent
     linear-gradient(90deg, #10c0c6 0%, #47d38c 100%, #086063 100%);
-}
-#name {
-  background: transparent
+  }
+  #name {
+    background: transparent
     linear-gradient(90deg, #10c0c6 0%, #47d38c 100%, #086063 100%);
-}
+  }
 
-#body {
-  background-color: #f1f1f1;
-  min-height: 100vh;
-}
-#button1 {
-  background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
-  font-family: "Lato", sans-serif;
-}
-#bg {
-}
-#button2 {
-  background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
-  font-family: "Lato", sans-serif;
-}
-#button3 {
-  background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
-  font-family: "Lato", sans-serif;
-}
+  #body {
+    background-color: #f1f1f1;
+    min-height: 100vh;
+  }
+  #button1 {
+    background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
+    font-family: 'Lato', sans-serif;
+  }
+  #bg {
+  }
+  #button2 {
+    background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
+    font-family: 'Lato', sans-serif;
+  }
+  #button3 {
+    background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
+    font-family: 'Lato', sans-serif;
+  }
 </style>
