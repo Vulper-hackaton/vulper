@@ -1,19 +1,5 @@
 <template>
-  <div id="body" class="container-fluid">
-    <div id="header" class="row justify-content-between">
-      <div id="logo" class="col-2 rounded">
-        <router-link to="/">
-          <div class="">
-            <img
-              src="../../public/assets/low-poly-gorilla.svg"
-              class="img-responsive"
-            />
-          </div>
-        </router-link>
-      </div>
-      <div id="name" class="col-2"></div>
-    </div>
-
+  <div>
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
@@ -23,6 +9,7 @@
     <div class="col pt-5"></div>
 
     <div class="col pt-5">
+
       <div class="row justify-content-md-center">
         <div id="bg" class="col col-lg-3">
           <router-link to="/register">
@@ -48,6 +35,7 @@
             </router-link>
           </div>
         </div>
+
         <div class="col col-4">
           <div class="row justify-content-end">
             <router-link to="/login">
@@ -57,6 +45,7 @@
             </router-link>
           </div>
         </div>
+
       </div>
     </div>
     <router-view />
@@ -64,9 +53,10 @@
 </template>
 
 <script>
-export default {
-  name: "Home",
-};
+  export default {
+
+    name: "Home"
+  }
 </script>
 
 <style lang="scss">

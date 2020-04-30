@@ -4,6 +4,9 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login";
 import Register from "../views/Register";
 import NewBroker from "../views/NewBroker";
+import UserDashboard from "../views/UserDashboard"
+import BrokerDashboard from "../views/BrokerDashboard"
+import MainHeader from "../components/MainHeader";
 
 Vue.use(VueRouter);
 
@@ -24,6 +27,16 @@ const routes = [
     component: Register,
   },
   {
+    path: "/user-dashboard",
+    name: "userdashboard",
+    component: UserDashboard,
+  },
+  {
+    path: "/broker-dashboard",
+    name: "BrokerDashboard",
+    component: BrokerDashboard,
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
@@ -37,6 +50,11 @@ const routes = [
     name: "NewBroker",
     component: NewBroker,
   },
+  {
+    path: "../components/main-header",
+    name: "MainHeader",
+    component: MainHeader,
+  }
 ];
 
 const router = new VueRouter({

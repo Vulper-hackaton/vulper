@@ -1,11 +1,10 @@
 <template>
-    <div>
-    </div>
+    <div>Broker Dashboard</div>
 </template>
 
 <script>
     export default {
-        name: "HelloWorld"
+        name: "BrokerDashboard"
     }
 </script>
 
