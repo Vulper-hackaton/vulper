@@ -122,7 +122,7 @@
                                         class="row justify-content-md-center mt-2"
                                         style="display:flex;flex-direction:column;"
                                 >
-                                    <router-link to="/login">
+                                    <router-link to="/user-dashboard">
                                         <button
                                                 type="button"
                                                 class="btn rounded btn-block btn-secondary"
