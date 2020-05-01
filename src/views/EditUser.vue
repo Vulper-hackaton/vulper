@@ -1,6 +1,6 @@
 <template>
     <div id="home-container">
-        <div id="p1" class="m-3 row justify-content-md-center">
+        <div id="p1" class="m-3 row" style="margin: 0!important;">
             <div id="p12" class="col col-1"></div>
 
             <div id="p13" class="col col-10 p-5">
@@ -147,9 +147,11 @@
 </script>
 
 <style lang="scss">
-    #p1 {
+    #home-container{
+        background-color: #f1f1f1;
     }
-    #p12 {
+    #p1,#p12 {
+        background-color: #f1f1f1;
     }
     #p13 {
         background-color: #d1d1d1;

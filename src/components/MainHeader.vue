@@ -2,6 +2,9 @@
   <div id="main-header" class="container-fluid">
     <div class="row">
 
+      <div style="font-family: 'Zilla Slab Highlight', cursive; font-size: 3rem; color: #4dde90; padding: 0 0 0 10px">
+        Vulper
+      </div>
       <div class="col">
         <router-link to="/">
           <div class="">
