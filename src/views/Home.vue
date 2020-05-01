@@ -36,16 +36,6 @@
           </div>
         </div>
 
-        <div class="col col-4">
-          <div class="row justify-content-end">
-            <router-link to="/login">
-              <button id="button3" type="button" class="btn rounded btn-sm">
-                Login
-              </button>
-            </router-link>
-          </div>
-        </div>
-
       </div>
     </div>
     <router-view />
@@ -67,6 +57,7 @@
   }
   #home-container{
     background-color: #f1f1f1;
+    height: 100%;
   }
   #logo {
     background: transparent
