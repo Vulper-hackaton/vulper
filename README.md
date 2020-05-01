@@ -9,8 +9,8 @@ Registro User |   :warning: | :heavy_check_mark:
 Registro Broker |   :warning: | :warning:
 Login | :warning:	 | :warning:
 Suitability |    |
-Dashboard User |     |
-Dashboard broker |     |
+Dashboard User | :warning:    |
+Dashboard broker | :warning:    |
 Página Cards |      |
 Página Chat |      |
 
