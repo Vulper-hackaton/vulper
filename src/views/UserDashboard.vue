@@ -15,7 +15,7 @@
                         Substituir por menu
                     </a>
                 </p>
-                <!-- Mudar esse collapse aqui quando tiver jquary-->
+                <!-- Mudar esse collapse aqui quando tiver jquery-->
                 <div class="" id="collapseExample">
                     <router-link to="/login">
                         <div class="card card-body">
