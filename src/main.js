@@ -1,9 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import axios from "axios"
-import firebase from "@firebase/app"
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import axios from "axios";
+import firebase from "firebase/app"
+require('firebase/firestore');
+
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
@@ -15,13 +19,20 @@ const firebaseConfig = {
   projectId: "vulper-hackaton",
   storageBucket: "vulper-hackaton.appspot.com",
   messagingSenderId: "388447340397",
-  appId: "1:388447340397:web:49ba999a24459e77d43c64"
+  appId: "1:388447340397:web:49ba999a24459e77d43c64",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app');
+let app;
+
+firebase.auth().onAuthStateChanged(user => {
+  console.log("user", user);
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App)
+    }).$mount("#app");
+  }
+});
