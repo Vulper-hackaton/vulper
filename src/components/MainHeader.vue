@@ -59,8 +59,10 @@
 
 <style scoped>
   #main-header{
-    /*ARRUMAR ESTA MERDA*/
+    /*TODO: arrumar o header*/
+    background-color: #f1f1f1;
   }
+  /*TODO: Arrumar user status e botão conforme design definido, em unidades relativas*/
   #user-status{
     text-align: right;
     margin-right: 40px;
