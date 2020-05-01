@@ -40,16 +40,15 @@ export default {
     };
   },
   methods: {
-    pressed() {
-      firebase.auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .then(data => {
-          console.log(data);
-          this.$router.replace({ name: "/" });
-        })
-        .catch(error => {
-          this.error = error;
-        });
+    async pressed() {
+        await firebase.auth()
+          .signInWithEmailAndPassword(this.email, this.password)
+          .then(() => {
+            this.$router.replace({ name: "user-dashboard" });
+          })
+          .catch(error => {
+            this.error = error;
+          });
     }
   }
 };

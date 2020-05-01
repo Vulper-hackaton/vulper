@@ -6,7 +6,8 @@ import Register from "../views/Register";
 import NewBroker from "../views/NewBroker";
 import UserDashboard from "../views/UserDashboard"
 import BrokerDashboard from "../views/BrokerDashboard"
-import MainHeader from "../components/MainHeader";
+import * as firebase from "firebase/app";
+import "firebase/auth";
 
 Vue.use(VueRouter);
 
@@ -28,7 +29,7 @@ const routes = [
   },
   {
     path: "/user-dashboard",
-    name: "userdashboard",
+    name: "user-dashboard",
     component: UserDashboard,
   },
   {
@@ -49,11 +50,6 @@ const routes = [
     path: "/new-broker",
     name: "NewBroker",
     component: NewBroker,
-  },
-  {
-    path: "../components/main-header",
-    name: "MainHeader",
-    component: MainHeader,
   }
 ];
 
@@ -61,6 +57,17 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const isAuthenticated = firebase.auth().currentUser;
+  console.log("Está autenticado", isAuthenticated);
+  if (requiresAuth && !isAuthenticated) {
+    next("/login");
+  } else {
+    next();
+  }
 });
 
 export default router;

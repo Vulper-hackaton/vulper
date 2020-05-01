@@ -1,6 +1,5 @@
 <template>
   <div id="body" class="container-fluid">
-
     <div class="error" v-if="error">{{error.message}}</div>
 
     <div class="d-flex justify-content-center p-5">
@@ -33,7 +32,6 @@
   import * as firebase from "firebase/app";
   import "firebase/auth";
   export default {
-
     data() {
       return {
         email: "",
@@ -47,9 +45,7 @@
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
           .then(() => {
-            // TODO: remove this from console
-            console.log("LOGOU, CARALHO!");
-            this.$router.replace({ name: "/" });
+            this.$router.replace({ name: "" });
           })
           .catch((error) => (this.error = error));
       },
