@@ -1,5 +1,7 @@
 <template>
-    
+    <div>
+        ROTEOU CERTO
+    </div>
 </template>
 
 <script>

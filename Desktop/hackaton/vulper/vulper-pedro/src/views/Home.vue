@@ -1,19 +1,5 @@
 <template>
-  <div id="body" class="container-fluid">
-    <div id="header" class="row justify-content-between">
-      <div id="logo" class="col-2 rounded">
-        <router-link to="/">
-          <div class="">
-            <img
-              src="../../public/assets/low-poly-gorilla.svg"
-              class="img-responsive"
-            />
-          </div>
-        </router-link>
-      </div>
-      <div id="name" class="col-2"></div>
-    </div>
-
+  <div id="home-container">
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
     <div class="col pt-5"></div>
@@ -48,6 +34,7 @@
             </router-link>
           </div>
         </div>
+
         <div class="col col-4">
           <div class="row justify-content-end">
             <router-link to="/login">
@@ -75,6 +62,9 @@ export default {
   width: auto;
   max-height: 72px;
   max-width: 72px;
+}
+#home-container {
+  background-color: #f1f1f1;
 }
 #logo {
   background: transparent
