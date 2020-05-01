@@ -8,10 +8,11 @@ Inicial |   :warning: | :heavy_check_mark:
 Registro User |   :warning: | :heavy_check_mark:
 Registro Broker |   :warning: | :warning:
 Login | :warning:	 | :warning:
-Suitability |    |
-Dashboard User | :warning:    |
-Dashboard broker | :warning:    |
-Página Cards |      |
+Suitability |    |   
+Criação User |     |   
+Criação Broker |     |  
+Cashboard Clientes | :warning:   | 
+Dashboard Broker |  :warning:    | 
 Página Chat |      |
 
 ## Project setup
