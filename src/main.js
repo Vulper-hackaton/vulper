@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import firebase from "firebase/app"
+require('firebase/firestore');
 
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -9,10 +9,14 @@
       </div>
     </router-link>
     <div id="name" class="col-2"></div>
-    <span v-if="logged">{{ username }}</span>
-    <span v-else>Fazer Login</span>
-    <!--Este botão é apenas provisório. TODO: retirá-lo daqui-->
-    <button class="but" @click="signOut">Sair</button>
+    <div id="user-status">
+      <span v-if="logged">Bem-vindo, {{ username }} </span>
+      <span v-else>Você não está logado</span>
+      <!--Este botão é apenas provisório. TODO: retirá-lo daqui-->
+      <span v-if="logged">
+        <button class="but" @click="signOut">Sair</button>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -56,5 +60,12 @@
 <style scoped>
   #main-header{
     /*ARRUMAR ESTA MERDA*/
+  }
+  #user-status{
+    text-align: right;
+    margin-right: 40px;
+  }
+  .but{
+    margin-left: 40px;
   }
 </style>
