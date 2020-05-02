@@ -32,8 +32,7 @@
 <script>
   import * as firebase from "firebase/app";
   import "firebase/auth";
-  require("firebase")
-  // TODO: ADICIONAR BROKER NUMA OUTRA BASE DE USUÁRIOS
+  require("firebase");
   export default {
     data() {
       return {
