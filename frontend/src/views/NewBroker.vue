@@ -48,11 +48,11 @@
         await firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
-          .then(() => {
-            let newBroker = {};
-            newBroker[firebase.auth().currentUser.uid] = this.email;
-            firebase.firestore().collection('brokers').doc('Xv2HrnhemOvZu902cBd9').set(newBroker, {merge: true});
-            this.$router.replace({ name: "edit-broker" });
+                .then(() => {
+                  let newBrokerMail = {"email":this.email};
+                  let newBrokerId = firebase.auth().currentUser.uid;
+                  firebase.firestore().collection('users').doc(newBrokerId).set(newBrokerMail, {merge: true});
+                  this.$router.replace({ name: "edit-broker" });
           })
           .catch((error) => (this.error = error));
       },

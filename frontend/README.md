@@ -5,6 +5,7 @@
 Páginas |   Design |   Funcionalidade
 ------------ | ------------- | -------------
 Inicial |   :warning: | :heavy_check_mark:
+Header |    :warning: | :heavy_check_mark:
 Registro User |   :warning: | :heavy_check_mark:
 Registro Broker |   :warning: | :warning:
 Login | :warning:	 | :warning:
