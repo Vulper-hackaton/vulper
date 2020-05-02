@@ -8,7 +8,12 @@ import UserDashboard from "../views/UserDashboard"
 import BrokerDashboard from "../views/BrokerDashboard"
 import EditUser from "../views/EditUser";
 import EditBroker from "../views/EditBroker"
-import Suitability from "../views/Suitability";
+import Suitability from "../views/suitability/Suitability";
+import SuitabilityBranchOne from "../views/suitability/SuitabilityBranchOne";
+import SuitabilityBranchTwo from "../views/suitability/SuitabilityBranchTwo";
+import SuitabilityBranchThree from "../views/suitability/SuitabilityBranchThree";
+import Chat from "../views/Chat"
+
 import * as firebase from "firebase/app";
 import "firebase/auth";
 
@@ -46,6 +51,21 @@ const routes = [
     component: Suitability,
   },
   {
+    path: "/suitability-b1",
+    name: "SuitabilityBranchOne",
+    component: SuitabilityBranchOne,
+  },
+  {
+    path: "/suitability-b2",
+    name: "SuitabilityBranchTwo",
+    component: SuitabilityBranchTwo,
+  },
+  {
+    path: "/suitability-b3",
+    name: "SuitabilityBranchThree",
+    component: SuitabilityBranchThree,
+  },
+  {
     path: "/new-broker",
     name: "NewBroker",
     component: NewBroker,
@@ -59,6 +79,11 @@ const routes = [
     path: "/edit-broker",
     name: "EditBroker",
     component: EditBroker
+  },
+  {
+    path: "/chat",
+    name: "Chat",
+    component: Chat,
   },
   {
     path: "/about",

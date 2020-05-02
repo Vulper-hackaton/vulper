@@ -7,9 +7,7 @@
         <form>
           <div class="input-group mt-3 row">
             <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="basic-addon1"
-                >Qual sua faixa etária?</span
-              >
+              <span class="input-group-text" id="age-question">Qual sua faixa etária?</span>
             </div>
             <div class="col col-8 pl-5">
               <div class="form-check p-2 m-2">
@@ -17,11 +15,11 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios1"
+                  id="exampleRadios1-1"
                   value="option1"
                   checked
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios1-1">
                   25 anos ou menos.
                 </label>
               </div>
@@ -30,10 +28,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios2-1"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios2-1">
                   De 26 a 35.
                 </label>
               </div>
@@ -42,10 +40,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios3-1"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios3-1">
                   De 36 a 45.
                 </label>
               </div>
@@ -54,10 +52,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios4-1"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios4-1">
                   De 46 a 65.
                 </label>
               </div>
@@ -66,10 +64,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios5-1"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios5-1">
                   Mais de 65 anos.
                 </label>
               </div>
@@ -77,7 +75,7 @@
           </div>
           <div class="input-group mt-3 row">
             <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="basic-addon1"
+              <span class="input-group-text" id="patrimony-question"
                 >Qual o seu patrimônio aproximado?
               </span>
             </div>
@@ -87,11 +85,11 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios1"
+                  id="exampleRadios1-2"
                   value="option1"
                   checked
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios1-2">
                   Menos de R$50 mil.
                 </label>
               </div>
@@ -100,10 +98,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios2-2"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios2-2">
                   Entre R$50 mil e R$250 mil.
                 </label>
               </div>
@@ -112,10 +110,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios3-2"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios3-2">
                   Entre R$250 mil e R$500 mil.
                 </label>
               </div>
@@ -124,10 +122,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios4-2"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios4-2">
                   Entre R$500 mil e R$750mil.
                 </label>
               </div>
@@ -136,10 +134,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios5-2"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios5-2">
                   Mais de R$750mil.
                 </label>
               </div>
@@ -147,7 +145,7 @@
           </div>
           <div class="input-group mt-3 row">
             <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="basic-addon1"
+              <span class="input-group-text" id="monthly-question"
                 >Qual sua renda média mensal?</span
               >
             </div>
@@ -157,11 +155,11 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios1"
+                  id="exampleRadios1-3"
                   value="option1"
                   checked
                 />
-                <label class="form-check-label" for="exampleRadios1">
+                <label class="form-check-label" for="exampleRadios1-3">
                   Até R$4 mil.
                 </label>
               </div>
@@ -170,10 +168,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios2-3"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios2-3">
                   De R$4 mil até R$10 mil.
                 </label>
               </div>
@@ -182,10 +180,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios3-3"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios3-3">
                   De R$10mil até R$20 mil.
                 </label>
               </div>
@@ -194,10 +192,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios4-3"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios4-3">
                   De R$20mil até R$30 mil.
                 </label>
               </div>
@@ -206,10 +204,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios5-3"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios5-3">
                   Mais de R$30 mil.
                 </label>
               </div>
@@ -217,7 +215,7 @@
           </div>
           <div class="input-group mt-3 row">
             <div class="col col-2 m-5  input-group-prepend mr-2">
-              <span class="input-group-text" id="basic-addon1"
+              <span class="input-group-text" id="experience-question"
                 >Já investiu?</span
               >
             </div>
@@ -252,10 +250,10 @@
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
+                  id="exampleRadios3"
                   value="option2"
                 />
-                <label class="form-check-label" for="exampleRadios2">
+                <label class="form-check-label" for="exampleRadios3">
                   Nunca Investi
                 </label>
               </div>
@@ -275,7 +273,7 @@
       </div>
       <div class="pb-5 pl-2">
         <router-link to="/edit-user">
-          <button id="but0" type="submit" class="btn rounded">
+          <button id="but1" type="submit" class="btn rounded">
             Sair
           </button>
         </router-link>
@@ -287,6 +285,7 @@
 <script>
 export default {
   name: "EditUser",
+    // Authenticate on sumbission for enter a especific branch
 };
 </script>
 
@@ -301,7 +300,7 @@ export default {
 #p13 {
   background-color: #d1d1d1;
 }
-#but0 {
+#but0, #but1 {
   background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
   font-family: "Lato", sans-serif;
 }

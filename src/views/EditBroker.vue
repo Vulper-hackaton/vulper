@@ -145,9 +145,9 @@
                     Insira sua corretora
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">XP</a>
+                    <a class="dropdown-item" href="#">XP investimentos</a>
                     <a class="dropdown-item" href="#">Invest Carlos</a>
-                    <a class="dropdown-item" href="#">Zezé DinDin</a>
+                    <a class="dropdown-item" href="#">Independente</a>
                 </div>
             </div>
             <p></p>
