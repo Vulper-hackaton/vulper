@@ -32,7 +32,7 @@
 <script>
   import * as firebase from "firebase/app";
   import "firebase/auth";
-  require("firebase")
+  require("firebase");
   // TODO: ADICIONAR BROKER NUMA OUTRA BASE DE USUÁRIOS
   export default {
     data() {
@@ -49,10 +49,10 @@
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
           .then(() => {
-            let newBroker = {};
-            newBroker[firebase.auth().currentUser.uid] = this.email;
-            firebase.firestore().collection('brokers').doc('Xv2HrnhemOvZu902cBd9').set(newBroker, {merge: true});
-            this.$router.replace({ name: "broker-dashboard" });
+            let newBrokerMail = {"email":this.email};
+            let newBrokerId = firebase.auth().currentUser.uid;
+            firebase.firestore().collection('brokers').doc(newBrokerId).set(newBrokerMail, {merge: true});
+            this.$router.replace({ name: "edit-broker" });
           })
           .catch((error) => (this.error = error));
       },

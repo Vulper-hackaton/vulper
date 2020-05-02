@@ -31,23 +31,29 @@
 <script>
   import * as firebase from "firebase/app";
   import "firebase/auth";
+  require("firebase");
+  // TODO: ADICIONAR BROKER NUMA OUTRA BASE DE USUÁRIOS
   export default {
     data() {
       return {
         email: "",
         password: "",
         error: "",
+        newBrokerID: "",
       };
     },
     methods: {
       pressed() {
         firebase
-          .auth()
-          .createUserWithEmailAndPassword(this.email, this.password)
-          .then(() => {
-            this.$router.replace({ name: "" });
-          })
-          .catch((error) => (this.error = error));
+                .auth()
+                .createUserWithEmailAndPassword(this.email, this.password)
+                .then(() => {
+                  let newUserMail = {"email":this.email};
+                  let newUserId = firebase.auth().currentUser.uid;
+                  firebase.firestore().collection('users').doc(newUserId).set(newUserMail, {merge: true});
+                  this.$router.replace({ name: "edit-user" });
+                })
+                .catch((error) => (this.error = error));
       },
     },
   };

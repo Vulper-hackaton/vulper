@@ -13,11 +13,7 @@
       <div class="row justify-content-md-center">
         <div id="bg" class="col col-lg-3">
           <router-link to="/register">
-            <button
-              id="button1"
-              type="button"
-              class="btn rounded btn-block p-3"
-            >
+            <button id="button1" type="button" class="btn rounded btn-block p-3">
               Cadastro de Cliente
             </button>
           </router-link>
