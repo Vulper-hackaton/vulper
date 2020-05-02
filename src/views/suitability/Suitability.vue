@@ -9,7 +9,7 @@
             <div class="col col-2 m-5 input-group-prepend mr-2">
               <span class="input-group-text" id="age-question">Qual sua faixa etária?</span>
             </div>
-            <div class="col col-8 pl-5">
+            <div class="col col-8 pl-5 ml-5">
               <div class="form-check p-2 m-2">
                 <input
                   class="form-check-input"
