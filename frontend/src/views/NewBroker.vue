@@ -50,7 +50,7 @@
                 .then(() => {
                   let newBrokerMail = {"email":this.email};
                   let newBrokerId = firebase.auth().currentUser.uid;
-                  firebase.firestore().collection('users').doc(newBrokerId).set(newBrokerMail, {merge: true});
+                  firebase.firestore().collection('brokers').doc(newBrokerId).set(newBrokerMail, {merge: true});
                   this.$router.replace({ name: "edit-broker" });
           })
           .catch((error) => (this.error = error));
