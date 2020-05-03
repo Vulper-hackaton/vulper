@@ -22,7 +22,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
   },
   {
@@ -42,52 +42,52 @@ const routes = [
   },
   {
     path: "/broker-dashboard",
-    name: "BrokerDashboard",
+    name: "broker-dashboard",
     component: BrokerDashboard,
   },
   {
     path: "/suitability",
-    name: "Suitability",
+    name: "suitability",
     component: Suitability,
   },
   {
     path: "/suitability-b1",
-    name: "SuitabilityBranchOne",
+    name: "suitability-b1",
     component: SuitabilityBranchOne,
   },
   {
     path: "/suitability-b2",
-    name: "SuitabilityBranchTwo",
+    name: "suitability-b2",
     component: SuitabilityBranchTwo,
   },
   {
     path: "/suitability-b3",
-    name: "SuitabilityBranchThree",
+    name: "suitability-b3",
     component: SuitabilityBranchThree,
   },
   {
     path: "/new-broker",
-    name: "NewBroker",
+    name: "new-broker",
     component: NewBroker,
   },
   {
     path: "/edit-user",
-    name: "EditUser",
+    name: "edit-user",
     component: EditUser,
   },
   {
     path: "/edit-broker",
-    name: "EditBroker",
+    name: "edit-broker",
     component: EditBroker
   },
   {
     path: "/chat",
-    name: "Chat",
+    name: "chat",
     component: Chat,
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },

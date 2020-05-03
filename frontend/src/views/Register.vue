@@ -41,6 +41,7 @@
     },
     methods: {
       async pressed() {
+        const self = this;
         await firebase
           .auth()
           .createUserWithEmailAndPassword(this.email, this.password)
@@ -48,7 +49,7 @@
                   let newUserMail = {"email":this.email};
                   let newUserId = firebase.auth().currentUser.uid;
                   firebase.firestore().collection('users').doc(newUserId).set(newUserMail, {merge: true});
-                  this.$router.replace({ name: "edit-user" });
+                  self.$router.replace({ name: "suitability" });
           }).catch((error) => (this.error = error));
       },
     },

@@ -41,14 +41,23 @@ export default {
   },
   methods: {
     async pressed() {
+        const self = this;
         await firebase.auth()
           .signInWithEmailAndPassword(this.email, this.password)
-          .then(() => {
-            this.$router.replace({ name: "user-dashboard" });
-          })
-          .catch(error => {
-            this.error = error;
-          });
+            .catch(error => {
+              this.error = error;
+            });
+
+        if (!this.error){
+          firebase.firestore().collection('brokers').doc(firebase.auth().currentUser.uid).get().then(
+              doc => {
+                if (!doc.exists){
+                  self.$router.replace({ name: "broker-dashboard" });
+                } else {
+                  self.$router.replace({ name: "user-dashboard" });
+                }
+              });
+        }
     }
   }
 };

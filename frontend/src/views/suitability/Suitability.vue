@@ -89,12 +89,12 @@
                 >Qual o seu patrimônio aproximado?
               </span>
             </div> -->
-            <form action="" method="post" name="edit" oninput="patrimony_output.value=parseInt(age.value);" class="container">
+            <form action="" method="post" name="edit" oninput="patrimony_output.value=parseInt(patrimony.value);" class="container">
               <div class="container" id="patrimony">
                 <label>Qual seu patrimônio aproximado?</label>
               </div>
               <label for="patrimony-slider">Slider Patrimônio</label>
-              <input type="range" class="custom-range" min="0" max="800000" id="patrimony-slider" step="50000">
+              <input type="range" class="custom-range" min="0" max="500000" id="patrimony-slider" step="1000" name="patrimony">
               <output name="patrimony_output" for="patrimony-slider" ></output>
             </form>
             <!-- <p>Caso seja mais de 750000 marque 800000</p> -->
@@ -168,13 +168,13 @@
                 >Qual sua renda média mensal?</span
               >
             </div> -->
-            <form action="" method="post" name="edit" oninput="earning_output.value=parseInt(age.value);" class="container">
+            <form action="" method="post" name="edit" oninput="earning_output.value=parseInt(earning.value);" class="container">
               <div class="container" id="earning">
-                <label>Qual sua renda média?</label>
+                <label>Qual sua renda média mensal?</label>
               </div>
               <label for="earning-slider">Slider renda</label>
-              <input type="range" class="custom-range" min="0" max="31000" id="earning-slider" step="1000">
-              <output name="earning_output" for="earning-slider" ></output>
+              <input type="range" class="custom-range" min="1000" max="31000" id="earning-slider" step="1000" name="earning">
+              <output name="earning_output" for="earning-slider"></output>
             </form>
             <!-- <div class="col col-8 pl-5 ml-5">
               <div class="form-check p-2 m-2">
@@ -240,10 +240,11 @@
               </div>
             </div> -->
           </div>
+
           <div class="input-group mt-3 row justify-content-center">
-            <div class="col col-10 m-5  input-group-prepend mr-2 text-center" >
-              <span class="input-group-text text-center" id="experience-question"
-                >Já investiu?</span
+            <div class="col col-10 m-5  input-group-prepend mr-2 text-center" style="justify-content: center">
+              <label id="experience-question" style="text-align: center"
+                >Já investiu?</label
               >
             </div>
             <div class="col col-8 pl-5 ml-5">
@@ -317,24 +318,24 @@ export default {
 </script>
 
 <style lang="scss">
-#home-container {
-  background-color: #f1f1f1;
-}
-#p1,
-#p12 {
-  background-color: #f1f1f1;
-}
-#p13 {
-  background-color: #d1d1d1;
-}
-#but0, #but1 {
-  background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
-  font-family: "Lato", sans-serif;
-}
-#idade, #patrimony, #earning, #experience-question{
-  text-align:center;
-}
-#aviso{
-  text-align:center;
-}
+  #home-container {
+    background-color: #f1f1f1;
+  }
+  #p1,
+  #p12 {
+    background-color: #f1f1f1;
+  }
+  #p13 {
+    background-color: #d1d1d1;
+  }
+  #but0, #but1 {
+    background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
+    font-family: "Lato", sans-serif;
+  }
+  #idade, #patrimony, #earning, #experience-question{
+    text-align:center;
+  }
+  #aviso{
+    text-align:center;
+  }
 </style>

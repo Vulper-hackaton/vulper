@@ -1,17 +1,16 @@
 <template>
   <div id="main-header" class="container-fluid">
     <div class="row">
-
-      <div style="font-family: 'Zilla Slab Highlight', cursive; font-size: 3rem; color: #4dde90; padding: 0 0 0 10px">
-        Vulper
-      </div>
-      <div class="col">
+      <div id="vulper-logo-img" class="col">
         <router-link to="/">
           <div class="">
             <img
-                src="../../public/assets/low-poly-gorilla.svg"
-                class="img-responsive"
-                alt="Logo"/>
+                    src="../../public/assets/header-logo.png"
+                    class="img-responsive"
+                    alt="Logo"
+                    style="margin-left: -1vw"
+            />
+            <!-- img src="../../public/assets/retangulo37.png" class="img-responsive" alt="plano de fundo"/-->
           </div>
         </router-link>
       </div>
@@ -19,14 +18,13 @@
       <div class="col" style="margin-top: 1%">
         <div id="name" class="col-2"></div>
         <div id="user-status">
-          <span v-if="logged">Bem-vindo, {{ username }} </span>
-          <span v-else>Você não está logado</span>
-          <!--Este botão é apenas provisório. TODO: retirá-lo daqui-->
+          <span v-if="logged" style="font-size: 1.2vw">Bem-vindo, {{ username }} </span>
+          <span v-else style="font-size: 1.2vw; justify-content: center">Você não está logado</span>
           <span v-if="logged">
-            <button type="button" class="btn rounded btn-sm" @click="signOut">Sair</button>
+            <button type="button" class="btn rounded btn-sm" style="color: white" @click="signOut">Sair</button>
           </span>
           <span v-else>
-            <button type="button" class="btn rounded btn-sm" @click="logIn">Login</button>
+            <button type="button" class="btn rounded btn-sm" style="color: white; border-radius: 20px!important;" @click="logIn">Login</button>
           </span>
         </div>
       </div>
@@ -62,10 +60,10 @@
     methods: {
       signOut() {
         if (this.logged){
-        firebase.auth().signOut()
-                .then(() => {
-                  this.$router.replace({ name: "login" });
-        });
+          firebase.auth().signOut()
+                  .then(() => {
+                    this.$router.replace({ name: "login" });
+                  });
         } else {console.log("Já estou deslogado!")}
       },
       logIn() {
@@ -80,18 +78,31 @@
 <style scoped>
   #main-header{
     /*TODO: arrumar o header*/
-    background-color: #d1d1d1;
+    background-color: #f1f1f1;
   }
-  /*TODO: Arrumar user status e botão conforme design definido, em unidades relativas*/
   #user-status{
     text-align: right;
-    margin-right: 40px;
+    margin-right: 7.2%;
   }
   button{
     background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
     font-family: "Lato", sans-serif;
-    margin-left: 20px;
-    padding: 4px 20px 4px 20px;
+    font-size: 1.2vw;
+    margin-left: 6%;
+    padding: 1% 4% 1% 4%;
     border-radius: 5px;
+  }
+  .img-responsive{
+    min-height: 12%;
+    min-width: 50%;
+    max-height: 12%;
+    max-width: 50%;
+    display: block;
+  }
+  #vulper-logo-name{
+    min-height: 12%;
+    min-width: 12%;
+    max-height: 12%;
+    max-width: 12%;
   }
 </style>
