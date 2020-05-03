@@ -71,21 +71,10 @@
       </div>
       <div class="col col-1">
         <div class="row justify-content-end">
-          <div>
-            <p>
-              <a
-                class="btn btn-primary"
-                data-toggle="collapse"
-                href="#collapseExample"
-                role="button"
-                aria-expanded="false"
-                aria-controls="collapseExample"
-              >
-                Substituir por menu
-              </a>
-            </p>
+          <div class="">
+            
             <!-- Mudar esse collapse aqui quando tiver jquery-->
-            <div class="" id="collapseExample">
+            <div class="pt-5" id="collapseExample">
               <router-link to="/login">
                 <div class="card card-body">
                   Mensagem
