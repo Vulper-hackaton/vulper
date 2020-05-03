@@ -8,7 +8,7 @@ const fs = require('fs');
 const {Storage} = require('@google-cloud/storage');
 const storage = new Storage ({
   projectId: "vulper-hackaton",
-  keyFilename: "vulper-hackaton-firebase-adminsdk-2ngo1-d1afc8d96a.json"
+  keyFilename: "vulper-hackaton-firebase-adminsdk-2ngo1-7dc7af4565.json"
 });
 
 
@@ -29,7 +29,12 @@ exports.uploadFile = functions.https.onRequest((req, res) => {
     });
 
     busboy.on('finish', () => {
-      const bucket = storage.bucket('fb-cloud-functions-demo.appspot.com');
+      //const request = require('request');
+      //const file = bucket.file(name);
+      //const writeStream = file.createWriteStream();
+      //request(url).pipe(writeStream);
+
+      const bucket = storage.bucket('vulper-hackaton.appspot.com');
       bucket
           .upload(uploadData.file, {
             uploadType: 'media',
