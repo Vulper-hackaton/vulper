@@ -8,7 +8,7 @@ const fs = require('fs');
 const {Storage} = require('@google-cloud/storage');
 const storage = new Storage ({
   projectId: "vulper-hackaton",
-  keyFilename: "vulper-hackaton-firebase-adminsdk-2ngo1-0678f01fe2.json"
+  keyFilename: "vulper-hackaton-firebase-adminsdk-2ngo1-d1afc8d96a.json"
 });
 
 

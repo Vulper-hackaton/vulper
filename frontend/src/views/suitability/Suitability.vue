@@ -2,19 +2,29 @@
   <div id="home-container">
     <div id="p1" class="m-3 row" style="margin: 0!important;">
       <div id="p12" class="col col-1"></div>
-
       <div id="p13" class="col col-10 p-5">
+        <div class="container" id="aviso">
+          <p>Caso seus dados estejam acima dos oferecidos, marcar último valor disponível</p>
+        </div>
         <form>
-          <div class="input-group mt-3 row">
-            <div class="col col-2 m-5 input-group-prepend mr-2">
+          <div class="input-group mt-3 row col-20">
+            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
               <span class="input-group-text" id="age-question" style="border-radius: 15px">Qual sua faixa etária?</span>
-            </div>
-            <div class="col col-8 pl-5">
+            </div> -->
+            <form action="" method="post" name="edit" oninput="age_output.value=parseInt(age.value);" class="container">
+              <div class="container" id="age">
+                <label>Quantos anos você tem?</label>
+              </div>
+              <label for="age-slider">Slider Idade</label>
+              <input type="range" class="custom-range" min="18" max="99" id="age-slider" name="age">
+              <output name="age_output" for="age-slider" ></output>
+            </form>
+            <!-- <div class="col col-8 pl-5">
               <div class="form-check p-2 m-2">
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios1"
                   id="exampleRadios1-1"
                   value="option1"
                   checked
@@ -27,7 +37,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios1"
                   id="exampleRadios2-1"
                   value="option2"
                 />
@@ -39,7 +49,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios1"
                   id="exampleRadios3-1"
                   value="option2"
                 />
@@ -51,7 +61,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios4"
                   id="exampleRadios4-1"
                   value="option2"
                 />
@@ -63,7 +73,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios1"
                   id="exampleRadios5-1"
                   value="option2"
                 />
@@ -71,20 +81,29 @@
                   Mais de 65 anos.
                 </label>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="input-group mt-3 row">
-            <div class="col col-2 m-5 input-group-prepend mr-2">
+            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
               <span class="input-group-text" id="patrimony-question"
                 >Qual o seu patrimônio aproximado?
               </span>
-            </div>
-            <div class="col col-8 pl-5 ml-5">
+            </div> -->
+            <form action="" method="post" name="edit" oninput="patrimony_output.value=parseInt(age.value);" class="container">
+              <div class="container" id="patrimony">
+                <label>Qual seu patrimônio aproximado?</label>
+              </div>
+              <label for="patrimony-slider">Slider Patrimônio</label>
+              <input type="range" class="custom-range" min="0" max="800000" id="patrimony-slider" step="50000">
+              <output name="patrimony_output" for="patrimony-slider" ></output>
+            </form>
+            <!-- <p>Caso seja mais de 750000 marque 800000</p> -->
+            <!-- <div class="col col-8 pl-5 ml-5">
               <div class="form-check p-2 m-2">
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios2"
                   id="exampleRadios1-2"
                   value="option1"
                   checked
@@ -97,7 +116,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios2"
                   id="exampleRadios2-2"
                   value="option2"
                 />
@@ -109,7 +128,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios2"
                   id="exampleRadios3-2"
                   value="option2"
                 />
@@ -121,7 +140,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios2"
                   id="exampleRadios4-2"
                   value="option2"
                 />
@@ -133,7 +152,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios2"
                   id="exampleRadios5-2"
                   value="option2"
                 />
@@ -141,20 +160,28 @@
                   Mais de R$750mil.
                 </label>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="input-group mt-3 row">
-            <div class="col col-2 m-5 input-group-prepend mr-2">
+            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
               <span class="input-group-text" id="monthly-question"
                 >Qual sua renda média mensal?</span
               >
-            </div>
-            <div class="col col-8 pl-5 ml-5">
+            </div> -->
+            <form action="" method="post" name="edit" oninput="earning_output.value=parseInt(age.value);" class="container">
+              <div class="container" id="earning">
+                <label>Qual sua renda média?</label>
+              </div>
+              <label for="earning-slider">Slider renda</label>
+              <input type="range" class="custom-range" min="0" max="31000" id="earning-slider" step="1000">
+              <output name="earning_output" for="earning-slider" ></output>
+            </form>
+            <!-- <div class="col col-8 pl-5 ml-5">
               <div class="form-check p-2 m-2">
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios3"
                   id="exampleRadios1-3"
                   value="option1"
                   checked
@@ -167,7 +194,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios3"
                   id="exampleRadios2-3"
                   value="option2"
                 />
@@ -179,7 +206,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios3"
                   id="exampleRadios3-3"
                   value="option2"
                 />
@@ -191,7 +218,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios3"
                   id="exampleRadios4-3"
                   value="option2"
                 />
@@ -203,7 +230,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios3"
                   id="exampleRadios5-3"
                   value="option2"
                 />
@@ -211,11 +238,11 @@
                   Mais de R$30 mil.
                 </label>
               </div>
-            </div>
+            </div> -->
           </div>
-          <div class="input-group mt-3 row">
-            <div class="col col-2 m-5  input-group-prepend mr-2">
-              <span class="input-group-text" id="experience-question"
+          <div class="input-group mt-3 row justify-content-center">
+            <div class="col col-10 m-5  input-group-prepend mr-2 text-center" >
+              <span class="input-group-text text-center" id="experience-question"
                 >Já investiu?</span
               >
             </div>
@@ -224,7 +251,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios4"
                   id="exampleRadios1"
                   value="option1"
                   checked
@@ -237,7 +264,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios4"
                   id="exampleRadios2"
                   value="option2"
                 />
@@ -249,7 +276,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="exampleRadios"
+                  name="exampleRadios4"
                   id="exampleRadios3"
                   value="option2"
                 />
@@ -303,5 +330,11 @@ export default {
 #but0, #but1 {
   background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
   font-family: "Lato", sans-serif;
+}
+#idade, #patrimony, #earning, #experience-question{
+  text-align:center;
+}
+#aviso{
+  text-align:center;
 }
 </style>

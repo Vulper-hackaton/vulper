@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17581fa2-75a4-4ac0-8a0a-2ee0836835c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/functions/vulper-hackaton-firebase-adminsdk-2ngo1-0678f01fe2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/functions/vulper-hackaton-firebase-adminsdk-2ngo1-d1afc8d96a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Suitability.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/functions/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/functions/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/functions/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/NewBroker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/NewBroker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/functions/vulper-hackaton-firebase-adminsdk-2ngo1-0678f01fe2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a51c046fa8acab9bdc3decd8108fa73a.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/a51c046fa8acab9bdc3decd8108fa73a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/b226af84580961ef0f083f7ff7d0c076.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/b226af84580961ef0f083f7ff7d0c076.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/04e2603fc73e3723880459a8aba36830.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/04e2603fc73e3723880459a8aba36830.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/2aa7c4acaf96e619d3886c85a2b742dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/2aa7c4acaf96e619d3886c85a2b742dd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/2e2dd259b35264c81fa6f2b42e6eef00.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/2e2dd259b35264c81fa6f2b42e6eef00.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/37d411cb4b9df37ea6ef3601dab9e2c3.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/37d411cb4b9df37ea6ef3601dab9e2c3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/402468c5fb8e2cc4bc21a8cf113e6788.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/402468c5fb8e2cc4bc21a8cf113e6788.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/63331ff67404ea615d23616acb9aa8b6.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/63331ff67404ea615d23616acb9aa8b6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/8ac9ca50c485c411dce9c81c99368f1d.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/8ac9ca50c485c411dce9c81c99368f1d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/95978c8a10f35cf8da709728d923626b.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/95978c8a10f35cf8da709728d923626b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/b369cf86d40753ed3944f5eca1b135b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/b369cf86d40753ed3944f5eca1b135b4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/f323385556c5ddd94b608c2a2e8b85b3.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/f323385556c5ddd94b608c2a2e8b85b3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/suitability/Suitability.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/suitability/Suitability.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +55,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\frontend\src\views\suitability" />
+      <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\frontend\src\views" />
       <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\backend\functions" />
       <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\frontend" />
       <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\public" />
-      <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\public\assets" />
-      <recent name="C:\Users\Nicholas\Desktop\vulper-dev\vulper\src\views\suitability" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588420623608</updated>
-      <workItem from="1588420627046" duration="25770000" />
+      <workItem from="1588420627046" duration="29065000" />
     </task>
     <servers />
   </component>
