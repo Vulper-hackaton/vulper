@@ -224,8 +224,7 @@
         },
         methods : {
             onSubmit() {
-                console.log(this.userData, this.userKnowledge)
-
+                let knowledge = 0;
                 let userId = firebase.auth().currentUser.uid;
                 for (let key in this.userData){
                     if (this.userData[key] === ""){
@@ -233,9 +232,24 @@
                         return;
                     }
                 }
+                for (let topic in this.userKnowledge){
+                    if (this.userData[topic] !== ""){
+                        knowledge += 1;
+                    }
+                }
+
+                function sigmoid(t){ return 1/(1+Math.pow(Math.E, -t)) }
+
+                firebase.firestore().collection('users').doc(firebase.auth().currentUser.uid).get().then(doc => {
+                    const userAge = doc.data().age;
+                    const alpha = Math.max(this.userData.timeInvesting / userAge, knowledge/7);
+                    let score = 50 + 50 * (Math.tanh(sigmoid(this.userData.fixedPercentage/25)
+                        + Math.tanh(2 * alpha * (2 - Number(this.userData.riskProfile.slice(-1))))));
+                    firebase.firestore().collection('users').doc(userId).set({experience: "", score: Math.round(score)}, {merge: true});
+                });
+
                 firebase.firestore().collection('users').doc(userId).set(this.userData, {merge: true});
                 firebase.firestore().collection('users').doc(userId).set(this.userKnowledge, {merge: true});
-                firebase.firestore().collection('users').doc(userId).set({experience: ""}, {merge: true});
                 this.$router.replace({ name: "user-dashboard" });
             },
             onExit() {
