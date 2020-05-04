@@ -21,7 +21,7 @@
           <span v-if="logged" style="font-size: 1.2vw">Bem-vindo, {{ username }} </span>
           <span v-else style="font-size: 1.2vw; justify-content: center">Você não está logado</span>
           <span v-if="logged">
-            <button type="button" class="btn rounded btn-sm" style="color: white" @click="signOut">Sair</button>
+            <button type="button" class="btn rounded btn-sm" style="color: white; border-radius: 20px!important;" @click="signOut">Sair</button>
           </span>
           <span v-else>
             <button type="button" class="btn rounded btn-sm" style="color: white; border-radius: 20px!important;" @click="logIn">Login</button>

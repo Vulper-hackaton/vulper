@@ -39,31 +39,37 @@ const routes = [
     path: "/user-dashboard",
     name: "user-dashboard",
     component: UserDashboard,
+    meta: {onlyUsers: true},
   },
   {
     path: "/broker-dashboard",
     name: "broker-dashboard",
     component: BrokerDashboard,
+    meta: {onlyBrokers: true},
   },
   {
     path: "/suitability",
     name: "suitability",
     component: Suitability,
+    meta: {onlyUsers: true},
   },
   {
     path: "/suitability-b1",
     name: "suitability-b1",
     component: SuitabilityBranchOne,
+    meta: {onlyB1: true},
   },
   {
     path: "/suitability-b2",
     name: "suitability-b2",
     component: SuitabilityBranchTwo,
+    meta: {onlyB2: true},
   },
   {
     path: "/suitability-b3",
     name: "suitability-b3",
     component: SuitabilityBranchThree,
+    meta: {onlyB3: true},
   },
   {
     path: "/new-broker",
@@ -74,16 +80,20 @@ const routes = [
     path: "/edit-user",
     name: "edit-user",
     component: EditUser,
+    meta: {onlyUsers: true},
   },
   {
     path: "/edit-broker",
     name: "edit-broker",
-    component: EditBroker
+    component: EditBroker,
+    meta: {onlyBrokers: true},
   },
   {
     path: "/chat",
     name: "chat",
     component: Chat,
+    // TODO: resolver mecânicas do chat
+    meta: {onlyAuth: true},
   },
   {
     path: "/about",
@@ -100,14 +110,54 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  const onlyUsers = to.matched.some(record => record.meta.onlyUsers);
+  const onlyBrokers = to.matched.some(record => record.meta.onlyBrokers);
+  const onlyB1 = to.matched.some(record => record.meta.onlyB1);
+  const onlyB2 = to.matched.some(record => record.meta.onlyB2);
+  const onlyB3 = to.matched.some(record => record.meta.onlyB3);
+
   const isAuthenticated = firebase.auth().currentUser;
-  console.log("Está autenticado", isAuthenticated);
-  if (requiresAuth && !isAuthenticated) {
-    next("/login");
+  if (!isAuthenticated){
+    // TODO: add all categories
+    if (onlyUsers || onlyBrokers || onlyB1 || onlyB2 || onlyB3) {
+      alert("you are not authenticated!");
+      next("/login");
+    } else {
+      next();
+    }
   } else {
-    next();
+    let isUser = true;
+    let isBroker = true;
+    firebase.firestore().collection('users').doc(isAuthenticated.uid).get().then(doc => {
+      if (!doc.exists) {
+        isUser = false;
+      } alert("I AM USER!" + isUser.toString())
+    });
+    firebase.firestore().collection('brokers').doc(isAuthenticated.uid).get().then(doc => {
+      if (!doc.exists) {
+        isBroker = false;
+      } alert("I AM BROKER!" + isBroker.toString());
+    });
+    // TODO: CHANGE THE VARIABLES OUTSIDE THEIR SCOPE
+    const isB1 = true;
+    const isB2 = true;
+    const isB3 = true;
+    alert(isUser.toString() +" "+ isBroker.toString());
+    if (onlyUsers && !isUser) {
+      alert("only users allowed!");
+    } else if (onlyBrokers && !isBroker) {
+      alert("only brokers allowed!");
+    } else if (onlyB1 && !isB1) {
+      alert("only b1 allowed!");
+    } else if (onlyB2 && !isB2) {
+      alert("only b2 allowed");
+    } else if (onlyB3 && !isB3) {
+      alert("only b3 allowed");
+    } else {
+      next();
+    }
   }
+  console.log("Está autenticado", isAuthenticated);
 });
 
 export default router;
