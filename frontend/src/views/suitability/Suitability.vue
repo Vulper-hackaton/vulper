@@ -4,282 +4,82 @@
       <div id="p12" class="col col-1"></div>
       <div id="p13" class="col col-10 p-5">
         <div class="container" id="aviso">
-          <p>Caso seus dados estejam acima dos oferecidos, marcar último valor disponível</p>
+          <p>Responda com valores tão aproximados quanto possível. Caso seus dados sejam maiores do que os oferecidos,
+            marque o último valor</p>
         </div>
         <form>
           <div class="input-group mt-3 row col-20">
-            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="age-question" style="border-radius: 15px">Qual sua faixa etária?</span>
-            </div> -->
             <form action="" method="post" name="edit" oninput="age_output.value=parseInt(age.value);" class="container">
               <div class="container" id="age">
                 <label>Quantos anos você tem?</label>
               </div>
-              <label for="age-slider">Slider Idade</label>
-              <input type="range" class="custom-range" min="18" max="99" id="age-slider" name="age">
+              <label for="age-slider">Idade</label>
+              <input type="range" class="custom-range" min="18" max="99" id="age-slider" name="age" v-model="userData.age">
               <output name="age_output" for="age-slider" ></output>
             </form>
-            <!-- <div class="col col-8 pl-5">
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios1"
-                  id="exampleRadios1-1"
-                  value="option1"
-                  checked
-                />
-                <label class="form-check-label" for="exampleRadios1-1">
-                  25 anos ou menos.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios1"
-                  id="exampleRadios2-1"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios2-1">
-                  De 26 a 35.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios1"
-                  id="exampleRadios3-1"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios3-1">
-                  De 36 a 45.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios4"
-                  id="exampleRadios4-1"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios4-1">
-                  De 46 a 65.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios1"
-                  id="exampleRadios5-1"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios5-1">
-                  Mais de 65 anos.
-                </label>
-              </div>
-            </div> -->
           </div>
+
           <div class="input-group mt-3 row">
-            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="patrimony-question"
-                >Qual o seu patrimônio aproximado?
-              </span>
-            </div> -->
             <form action="" method="post" name="edit" oninput="patrimony_output.value=parseInt(patrimony.value);" class="container">
               <div class="container" id="patrimony">
                 <label>Qual seu patrimônio aproximado?</label>
               </div>
-              <label for="patrimony-slider">Slider Patrimônio</label>
-              <input type="range" class="custom-range" min="0" max="500000" id="patrimony-slider" step="1000" name="patrimony">
+              <label for="patrimony-slider">Patrimônio</label>
+              <input type="range" class="custom-range" min="0" max="500000" id="patrimony-slider" step="1000" name="patrimony" v-model="userData.patrimony">
               <output name="patrimony_output" for="patrimony-slider" ></output>
             </form>
-            <!-- <p>Caso seja mais de 750000 marque 800000</p> -->
-            <!-- <div class="col col-8 pl-5 ml-5">
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios2"
-                  id="exampleRadios1-2"
-                  value="option1"
-                  checked
-                />
-                <label class="form-check-label" for="exampleRadios1-2">
-                  Menos de R$50 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios2"
-                  id="exampleRadios2-2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios2-2">
-                  Entre R$50 mil e R$250 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios2"
-                  id="exampleRadios3-2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios3-2">
-                  Entre R$250 mil e R$500 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios2"
-                  id="exampleRadios4-2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios4-2">
-                  Entre R$500 mil e R$750mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios2"
-                  id="exampleRadios5-2"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios5-2">
-                  Mais de R$750mil.
-                </label>
-              </div>
-            </div> -->
           </div>
+
           <div class="input-group mt-3 row">
-            <!-- <div class="col col-2 m-5 input-group-prepend mr-2">
-              <span class="input-group-text" id="monthly-question"
-                >Qual sua renda média mensal?</span
-              >
-            </div> -->
             <form action="" method="post" name="edit" oninput="earning_output.value=parseInt(earning.value);" class="container">
               <div class="container" id="earning">
                 <label>Qual sua renda média mensal?</label>
               </div>
-              <label for="earning-slider">Slider renda</label>
-              <input type="range" class="custom-range" min="1000" max="31000" id="earning-slider" step="1000" name="earning">
+              <label for="earning-slider">Renda</label>
+              <input type="range" class="custom-range" min="1000" max="31000" id="earning-slider" step="1000" name="earning" v-model="userData.earning">
               <output name="earning_output" for="earning-slider"></output>
             </form>
-            <!-- <div class="col col-8 pl-5 ml-5">
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios3"
-                  id="exampleRadios1-3"
-                  value="option1"
-                  checked
-                />
-                <label class="form-check-label" for="exampleRadios1-3">
-                  Até R$4 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios3"
-                  id="exampleRadios2-3"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios2-3">
-                  De R$4 mil até R$10 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios3"
-                  id="exampleRadios3-3"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios3-3">
-                  De R$10mil até R$20 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios3"
-                  id="exampleRadios4-3"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios4-3">
-                  De R$20mil até R$30 mil.
-                </label>
-              </div>
-              <div class="form-check p-2 m-2">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="exampleRadios3"
-                  id="exampleRadios5-3"
-                  value="option2"
-                />
-                <label class="form-check-label" for="exampleRadios5-3">
-                  Mais de R$30 mil.
-                </label>
-              </div>
-            </div> -->
           </div>
 
           <div class="input-group mt-3 row justify-content-center">
             <div class="col col-10 m-5  input-group-prepend mr-2 text-center" style="justify-content: center">
               <label id="experience-question" style="text-align: center"
-                >Já investiu?</label
+                >Alguma vez você já investiu? Poupança não conta!</label
               >
             </div>
             <div class="col col-8 pl-5 ml-5">
               <div class="form-check p-2 m-2">
-                <input
+                <input v-model="userData.experience"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios4"
                   id="exampleRadios1"
-                  value="option1"
+                  value="b1"
                   checked
                 />
                 <label class="form-check-label" for="exampleRadios1">
-                  Invisto
+                  Invisto atualmente
                 </label>
               </div>
               <div class="form-check p-2 m-2">
-                <input
+                <input v-model="userData.experience"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios4"
                   id="exampleRadios2"
-                  value="option2"
+                  value="b2"
                 />
                 <label class="form-check-label" for="exampleRadios2">
-                  Já investi
+                  Já investi no passado
                 </label>
               </div>
               <div class="form-check p-2 m-2">
-                <input
+                <input v-model="userData.experience"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios4"
                   id="exampleRadios3"
-                  value="option2"
+                  value="b3"
                 />
                 <label class="form-check-label" for="exampleRadios3">
                   Nunca Investi
@@ -293,27 +93,52 @@
     </div>
     <div class="row justify-content-center m-5">
       <div class="pb-5 pl-2">
-        <router-link to="/suitability">
-          <button id="but0" type="submit" class="btn rounded">
-            Seguinte
-          </button>
-        </router-link>
+        <button id="but0" type="submit" class="btn rounded" @click="onSubmit">
+          Seguinte
+        </button>
       </div>
       <div class="pb-5 pl-2">
-        <router-link to="/edit-user">
-          <button id="but1" type="submit" class="btn rounded">
-            Sair
-          </button>
-        </router-link>
+        <button id="but1" type="submit" class="btn rounded" @click="onExit">
+          Sair
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+  import * as firebase from "firebase/app";
+  import "firebase/auth";
+  require("firebase");
+
+  export default {
   name: "EditUser",
-    // Authenticate on sumbission for enter a especific branch
+  data() {
+    return {
+      userData: {
+        age: "",
+        patrimony: "",
+        earning: "",
+        experience: ""
+      }
+    }
+  },
+  methods : {
+    onSubmit() {
+      let userId = firebase.auth().currentUser.uid;
+      for (let key in this.userData){
+        if (!this.userData[key]){
+          alert("Preencha todas as perguntas para continuar");
+          return;
+        }
+      }
+      firebase.firestore().collection('users').doc(userId).set(this.userData, {merge: true});
+      this.$router.replace({ name: `suitability-${this.userData.experience}` });
+    },
+    onExit() {
+      this.$router.replace({ name: "user-dashboard" });
+    }
+  }
 };
 </script>
 
@@ -332,7 +157,7 @@ export default {
     background: transparent linear-gradient(270deg, #4dde90 0%, #10c0c6 100%);
     font-family: "Lato", sans-serif;
   }
-  #idade, #patrimony, #earning, #experience-question{
+  #age, #patrimony, #earning, #experience-question{
     text-align:center;
   }
   #aviso{

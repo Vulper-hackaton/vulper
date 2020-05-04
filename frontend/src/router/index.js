@@ -57,19 +57,19 @@ const routes = [
     path: "/suitability-b1",
     name: "suitability-b1",
     component: SuitabilityBranchOne,
-    meta: {onlyB1: true},
+    meta: {onlyUsers: true, onlyB1: true},
   },
   {
     path: "/suitability-b2",
     name: "suitability-b2",
     component: SuitabilityBranchTwo,
-    meta: {onlyB2: true},
+    meta: {onlyUsers: true, onlyB2: true},
   },
   {
     path: "/suitability-b3",
     name: "suitability-b3",
     component: SuitabilityBranchThree,
-    meta: {onlyB3: true},
+    meta: {onlyUsers: true, onlyB3: true},
   },
   {
     path: "/new-broker",
@@ -116,48 +116,55 @@ router.beforeEach((to, from, next) => {
   const onlyB2 = to.matched.some(record => record.meta.onlyB2);
   const onlyB3 = to.matched.some(record => record.meta.onlyB3);
 
-  const isAuthenticated = firebase.auth().currentUser;
-  if (!isAuthenticated){
-    // TODO: add all categories
-    if (onlyUsers || onlyBrokers || onlyB1 || onlyB2 || onlyB3) {
-      alert("you are not authenticated!");
-      next("/login");
-    } else {
-      next();
-    }
+  // Everybody can enter
+  if (!onlyUsers && !onlyBrokers && !onlyB1 && !onlyB2 && !onlyB3){
+    next();
   } else {
-    let isUser = true;
-    let isBroker = true;
-    firebase.firestore().collection('users').doc(isAuthenticated.uid).get().then(doc => {
-      if (!doc.exists) {
-        isUser = false;
-      } alert("I AM USER!" + isUser.toString())
-    });
-    firebase.firestore().collection('brokers').doc(isAuthenticated.uid).get().then(doc => {
-      if (!doc.exists) {
-        isBroker = false;
-      } alert("I AM BROKER!" + isBroker.toString());
-    });
-    // TODO: CHANGE THE VARIABLES OUTSIDE THEIR SCOPE
-    const isB1 = true;
-    const isB2 = true;
-    const isB3 = true;
-    alert(isUser.toString() +" "+ isBroker.toString());
-    if (onlyUsers && !isUser) {
-      alert("only users allowed!");
-    } else if (onlyBrokers && !isBroker) {
-      alert("only brokers allowed!");
-    } else if (onlyB1 && !isB1) {
-      alert("only b1 allowed!");
-    } else if (onlyB2 && !isB2) {
-      alert("only b2 allowed");
-    } else if (onlyB3 && !isB3) {
-      alert("only b3 allowed");
+    // Some auth required
+    const isAuthenticated = firebase.auth().currentUser;
+    if (!isAuthenticated){
+      // TODO: add all categories
+        alert("Crie uma conta ou faça login para continuar!");
+        next("/register");
     } else {
+      let isUser = true;
+      let isBroker = true;
+
+      firebase.firestore().collection('users').doc(isAuthenticated.uid).get().then(doc => {
+        if (!doc.exists) {
+          isUser = false;
+        } if (onlyUsers && !isUser) {
+          next("/login");
+        } else if (onlyUsers && isUser) {
+          if (onlyB1 || onlyB2 || onlyB3){
+            let branch = doc.data().experience;
+            if (onlyB1 && branch==="b1"){
+              next();
+            } else if (onlyB2 && branch==="b2"){
+              next();
+            } else if (onlyB3 && branch==="b3"){
+              next();
+            } else {
+              next("/login");
+            }
+          } else {
+          next();
+          }
+        }
+      });
+
+      firebase.firestore().collection('brokers').doc(isAuthenticated.uid).get().then(doc => {
+        if (!doc.exists) {
+          isBroker = false;
+        } if (onlyBrokers && !isBroker) {
+          next("/login");
+        } else if (onlyBrokers && isBroker){
+          next();
+        }
+      });
       next();
     }
   }
-  console.log("Está autenticado", isAuthenticated);
 });
 
 export default router;
