@@ -112,7 +112,7 @@
   require("firebase");
 
   export default {
-  name: "EditUser",
+  name: "Suitability",
   data() {
     return {
       userData: {
