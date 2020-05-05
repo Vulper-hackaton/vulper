@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17581fa2-75a4-4ac0-8a0a-2ee0836835c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/71718f4e3fb69b07f745b08bcfb6f745.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/babel-loader/71718f4e3fb69b07f745b08bcfb6f745.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/8b2a17793cad08d2ad36676cef3b045c.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/8b2a17793cad08d2ad36676cef3b045c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/e77ac61c56cf630ee669d45a75d0eb3f.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.cache/vue-loader/e77ac61c56cf630ee669d45a75d0eb3f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchOne.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchOne.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchThree.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchThree.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchTwo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/suitability/SuitabilityBranchTwo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/EditUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/EditUser.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588420623608</updated>
-      <workItem from="1588420627046" duration="105085000" />
+      <workItem from="1588420627046" duration="109737000" />
     </task>
     <servers />
   </component>
