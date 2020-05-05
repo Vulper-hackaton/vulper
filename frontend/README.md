@@ -12,8 +12,8 @@ Login | :warning:	 | :warning:
 Suitability | :warning:   |   :heavy_check_mark:
 Editor User |  :warning:   |   :heavy_check_mark:
 Editor Broker | :warning:   |  :heavy_check_mark:
-Dashboard Clientes | :warning:   | 
-Dashboard Broker |  :warning:    | 
+Dashboard Clientes | :warning:   | :warning:
+Dashboard Broker |  :warning:    | :warning:
 Página Chat |      |
 
 ## Project setup
