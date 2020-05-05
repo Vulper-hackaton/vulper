@@ -9,10 +9,10 @@ Header |    :warning: | :heavy_check_mark:
 Registro User |   :warning: | :heavy_check_mark:
 Registro Broker |   :warning: | :warning:
 Login | :warning:	 | :warning:
-Suitability |    |   
-Editor User |  :warning:   |   
-Editor Broker |     |  
-Cashboard Clientes | :warning:   | 
+Suitability | :warning:   |   :heavy_check_mark:
+Editor User |  :warning:   |   :heavy_check_mark:
+Editor Broker | :warning:   |  :heavy_check_mark:
+Dashboard Clientes | :warning:   | 
 Dashboard Broker |  :warning:    | 
 Página Chat |      |
 
